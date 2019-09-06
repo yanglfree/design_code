@@ -99,3 +99,61 @@ struct MenuView: View {
 }
 
 ```
+
+#### Section10 滚动内容
+使用ScrollView 横向滚动
+
+效果图
+![1.gif](https://ws1.sinaimg.cn/large/007dl3HPgy1g6ptoi3ws2g308f0hcqge.gif)
+
+```swift
+//这是最新的beta6的写法 ScrollView使用构造函数来控制滚动方向
+struct HomeList: View {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(0 ..< 3) { item in
+                    CourseView()
+                }
+            }
+        }
+    }
+}
+
+//beta 2 scrollview用法稍有不同 直接使用scrollview默认就是横向滚动 
+// showHorizantalIndicators控制滚动条的显示
+struct HomeList: View {
+    var body: some View {
+        ScrollView(showHorizantalIndicators: false) {
+            HStack {
+                ForEach(0 ..< 3) { item in
+                    CourseView()
+                }
+            }
+        }
+    }
+}
+
+
+struct CourseView: View {
+    var body: some View {
+        VStack (alignment: .leading){
+            Text("Build an app with SwiftUI")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
+                .padding(20)
+                .lineLimit(4)
+                .frame(width:150)
+            Spacer()
+            Image("Illustration1")
+        }
+        .background(Color("background3"))
+        .cornerRadius(30)
+        .frame(width:246, height:360)
+        .shadow(color: Color("backroundShadow1"), radius: 20, x: 0, y: 20)
+    }
+}
+
+
+```
