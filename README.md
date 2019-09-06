@@ -156,5 +156,9 @@ struct CourseView: View {
     }
 }
 
-
 ```
+#### Section11 模态
+
+效果图
+
+![2.gif](https://ws1.sinaimg.cn/large/007dl3HPgy1g6pxirpdx3g308f0hcnh7.gif)
