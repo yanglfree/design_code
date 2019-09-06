@@ -103,7 +103,8 @@ struct MenuView: View {
 #### Section10 滚动内容
 使用ScrollView 横向滚动
 
-效果图
+效果图：
+
 ![1.gif](https://ws1.sinaimg.cn/large/007dl3HPgy1g6ptoi3ws2g308f0hcqge.gif)
 
 ```swift
