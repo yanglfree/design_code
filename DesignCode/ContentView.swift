@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var show = false
+    @State var viewState = CGSize.zero
     
     var body: some View{
         ZStack {
@@ -23,7 +24,7 @@ struct ContentView: View {
                 .blur(radius: show ? 20 : 0)
 
             CardView()
-                .background(show ? Color.red :Color("background9"))
+                .background(show ? Color("background5") :Color("background9"))
                 .cornerRadius(10)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -400 : -40)
@@ -34,7 +35,7 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.7))
             
             CardView()
-                .background(show ? Color.red :Color("background8"))
+                .background(show ? Color("background5") :Color("background8"))
                 .cornerRadius(10)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -200 : -20)
@@ -47,13 +48,25 @@ struct ContentView: View {
             CertificateView()
                 .scaleEffect(0.95)
                 .rotationEffect(Angle(degrees: show ? 5 : 0))
-//                .rotation3DEffect(Angle(degrees: show ? 30 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
+                //                .rotation3DEffect(Angle(degrees: show ? 30 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
                 .animation(.spring(response: 0.55, dampingFraction: 1.0, blendDuration: 0.5))
                 .blendMode(.darken)
                 .onTapGesture {
                     self.show.toggle()
+            }
+            .gesture(
+                DragGesture()
+                    .onChanged{ value in
+                        self.viewState = value.translation
+                        self.show = true
+                        
                 }
-                
+                .onEnded{ value in
+                    self.viewState = CGSize.zero
+                    self.show = false
+                }
+            )
+                    
         }
     }
 }
