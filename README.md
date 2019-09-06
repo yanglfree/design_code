@@ -162,3 +162,32 @@ struct CourseView: View {
 效果图
 
 ![2.gif](https://ws1.sinaimg.cn/large/007dl3HPgy1g6pxirpdx3g308f0hcnh7.gif)
+
+```swift 
+
+//PresentationButton 在beta5中已经过期 使用NavigationLink搭配NavigationView来使用代替
+
+struct HomeList: View {
+    @State var isPresent = true
+    var course = courseData
+    var body: some View {
+        NavigationView{
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing:30) {
+                    ForEach(course) { item in
+                        NavigationLink(destination: ContentView()){
+                            CourseView(
+                                title: item.title,
+                                image: item.image,
+                                color: item.color,
+                                shadowColor: item.shadowColor
+                            )
+                        }
+                    }
+                }
+            }
+            .padding(.leading, 30)
+        }
+    }
+}
+```
