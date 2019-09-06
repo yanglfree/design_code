@@ -7,7 +7,9 @@ Design Code出品的一个SwiftUI教程。用SwiftUI开发一个app
 
 
 section 8: 菜单动画和绑定
+
 效果图：
+
 ![menu_animation.gif](https://ws1.sinaimg.cn/large/007dl3HPgy1g6po9z7i0ag308a0h6di9.gif)
 
 ``` swift
