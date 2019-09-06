@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E102CB2C23212A6900A4E3F3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102CB2B23212A6900A4E3F3 /* Home.swift */; };
+		E102CB2E2322363600A4E3F3 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102CB2D2322363600A4E3F3 /* HomeList.swift */; };
 		E1768F092320F0F600F430DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1768F082320F0F600F430DF /* AppDelegate.swift */; };
 		E1768F0B2320F0F600F430DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1768F0A2320F0F600F430DF /* SceneDelegate.swift */; };
 		E1768F0D2320F0F600F430DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1768F0C2320F0F600F430DF /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		E102CB2B23212A6900A4E3F3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E102CB2D2322363600A4E3F3 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		E1768F052320F0F600F430DF /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1768F082320F0F600F430DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1768F0A2320F0F600F430DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				E1768F0A2320F0F600F430DF /* SceneDelegate.swift */,
 				E1768F0C2320F0F600F430DF /* ContentView.swift */,
 				E102CB2B23212A6900A4E3F3 /* Home.swift */,
+				E102CB2D2322363600A4E3F3 /* HomeList.swift */,
 				E1768F0E2320F0FD00F430DF /* Assets.xcassets */,
 				E1768F132320F0FD00F430DF /* LaunchScreen.storyboard */,
 				E1768F162320F0FD00F430DF /* Info.plist */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1768F092320F0F600F430DF /* AppDelegate.swift in Sources */,
+				E102CB2E2322363600A4E3F3 /* HomeList.swift in Sources */,
 				E1768F0B2320F0F600F430DF /* SceneDelegate.swift in Sources */,
 				E102CB2C23212A6900A4E3F3 /* Home.swift in Sources */,
 				E1768F0D2320F0F600F430DF /* ContentView.swift in Sources */,
