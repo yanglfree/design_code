@@ -9,26 +9,26 @@
 import SwiftUI
 
 struct HomeList: View {
-    @State var isPresent = true
+    @State var isPresent = false
     var course = courseData
     var body: some View {
         NavigationView{
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing:30) {
                     ForEach(course) { item in
-                        NavigationLink(destination: ContentView()){
-                            CourseView(
-                                title: item.title,
-                                image: item.image,
-                                color: item.color,
-                          shadowColor: item.shadowColor
-                            )
-                        }
+                        CourseView(
+                            title: item.title,
+                            image: item.image,
+                            color: item.color,
+                            shadowColor: item.shadowColor, isPresent:self.$isPresent
+                        )
                     }
                 }
             }
-            .padding(.leading, 30)
+            .sheet(isPresented: $isPresent, content: {ContentView()})
         }
+        .padding(.leading, 30)
+       
     }
 }
 
@@ -44,6 +44,8 @@ struct CourseView: View {
     var image = "Illustration1"
     var color = Color("background3")
     var shadowColor = Color("backgroundShadow1")
+    
+    @Binding var isPresent: Bool
     
     var body: some View {
         VStack (alignment: .leading){
@@ -68,6 +70,9 @@ struct CourseView: View {
         .cornerRadius(30)
         .frame(width:246, height:360)
         .shadow(color: shadowColor, radius: 20, x: 0, y: 20)
+        .onTapGesture {
+            self.isPresent.toggle()
+        }
     }
 }
 
