@@ -12,22 +12,39 @@ struct HomeList: View {
     @State var isPresent = false
     var course = courseData
     var body: some View {
-        NavigationView{
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing:30) {
-                    ForEach(course) { item in
-                        CourseView(
-                            title: item.title,
-                            image: item.image,
-                            color: item.color,
-                            shadowColor: item.shadowColor, isPresent:self.$isPresent
-                        )
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Courses")
+                        .font(.largeTitle)
+                    
+                    Text("21 Courses")
+                        .foregroundColor(.gray)
+                }
+                
+                Spacer()
+            }
+            .padding(.top,90)
+            .padding(.leading,60)
+                
+
+            NavigationView{
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing:30) {
+                        ForEach(course) { item in
+                            CourseView(
+                                title: item.title,
+                                image: item.image,
+                                color: item.color,
+                                shadowColor: item.shadowColor, isPresent:self.$isPresent
+                            )
+                        }
                     }
                 }
+                .sheet(isPresented: $isPresent, content: {ContentView()})
             }
-            .sheet(isPresented: $isPresent, content: {ContentView()})
+            .padding(.leading, 30)
         }
-        .padding(.leading, 30)
        
     }
 }
