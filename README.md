@@ -194,9 +194,14 @@ struct HomeList: View {
 
 #### Section13 导航视图和列表
 
+效果图：
+
+![3.gif](https://ws1.sinaimg.cn/large/007dl3HPgy1g6t4lextvjg30990i0b29.gif)
+
+
 SwiftUI中导航视图NavigationView 搭配NavigationLink可以快速实现 在item条目多的情况下滑动后标题栏会自动变化，并且跳转的时候自带动画效果。
 
-**注意 beta6下NavigationButton已经失效，用NavigationLink取代
+**注意 beta6下NavigationButton已经失效，用NavigationLink取代**
 
 ```swift
         NavigationView {
@@ -221,6 +226,4 @@ SwiftUI中导航视图NavigationView 搭配NavigationLink可以快速实现 在i
         .navigationBarItems(trailing:  Text("update"))
         }
 ```
-效果图：
 
-![3.gif](https://ws1.sinaimg.cn/large/007dl3HPgy1g6t4lextvjg30990i0b29.gif)
