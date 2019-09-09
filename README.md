@@ -289,11 +289,16 @@ class UpdateStore: ObservableObject {
     }
 ```
 
-列表的删除动作：
+列表item的删除动作：
 ```
 List{} .onDelete{ index in
-                        self.updateStore.updates.remove(at: index.first!)
+    self.updateStore.updates.remove(at: index.first!)
 }
+```
+
+列表item的移动：
+```
+List{}.onMove(perform: move)
 ```
 
 
