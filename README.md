@@ -231,3 +231,45 @@ SwiftUI中导航视图NavigationView 搭配NavigationLink可以快速实现 在i
         }
 ```
 
+#### Section14 导航和传递数据
+
+
+
+#### Section15 合并编辑数据
+
+效果图：
+
+![4.gif](https://ws1.sinaimg.cn/large/007dl3HPgy1g6t96vn333g308j0h11ky.gif)
+
+SwiftUI提供了Combine框架为我们进行数据的动态绑定。
+
+首先创建一个类，定义需要动态绑定的数据updates
+**beta5以前用的BindableObject已经过期，使用ObservableObject代替**
+
+这里有一篇关于beta5的一些变更的说明
+https://sarunw.com/posts/swiftui-changes-in-xcode-11-beta-5
+
+```
+class UpdateStore: ObservableObject {
+    var objectWillChange = PassthroughSubject<Void, Never>()
+    
+    var updates: [Update]{
+        didSet{
+            objectWillChange.send()
+        }
+    }
+    
+    init(updates:[Update]) {
+        self.updates = updates
+    }
+}
+```
+在使用动态绑定的数据的类中定义一个ObservedObject标记的变量
+```
+@ObservedObject var updateStore = UpdateStore(updates: updateData)
+```
+
+
+
+
+
