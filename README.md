@@ -203,6 +203,10 @@ SwiftUI中导航视图NavigationView 搭配NavigationLink可以快速实现 在i
 
 **注意 beta6下NavigationButton已经失效，用NavigationLink取代**
 
+设置title： 在List{}后设置navigationBarTitle
+设置barItems 在List{}后设置navigationBarItems  
+
+
 ```swift
         NavigationView {
             List(updates) { item in
