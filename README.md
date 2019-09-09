@@ -4,7 +4,8 @@ Degisn Code的SwiftUI教程 代码
 Design Code出品的一个SwiftUI教程。用SwiftUI开发一个app
 
 #### 开发环境：
-操作系统： 10.15 Beta Catalina   Xcode:11.0 Beta6
+操作系统： macOS Catalina  10.15 Beta
+Xcode: 11.0 Beta6
 
 #### Section 7 : 使用数组来创建列表
 前面的Menu是通过一个个的手写数据来创建的，这节将通过数组来创建列表
