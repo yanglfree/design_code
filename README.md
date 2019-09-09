@@ -268,8 +268,33 @@ class UpdateStore: ObservableObject {
 ```
 @ObservedObject var updateStore = UpdateStore(updates: updateData)
 ```
+然后在ForEach中遍历这个变量
 
+```
+ List{
+          ForEach(updateStore.updates) { item in
+          NavigationLink(destination: UpdateDetail(title: item.title, image: item.image, text: item.text)) {
+```
 
+对数据的新增 更换位置的操作如下
+```
+    //新增数据
+    func addUpdate(){
+        updateStore.updates.append(Update(title: "New title", image: "Certificate1", text: "New text", date: "Jun 1"))
+    }
+    
+    //数据位置更换
+    func move(from source: IndexSet, to destination: Int){
+        updateStore.updates.swapAt(source.first!, destination)
+    }
+```
+
+列表的删除动作：
+```
+List{} .onDelete{ index in
+                        self.updateStore.updates.remove(at: index.first!)
+}
+```
 
 
 
