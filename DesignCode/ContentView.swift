@@ -52,7 +52,7 @@ struct ContentView: View {
                 .rotationEffect(Angle(degrees: show ? 5 : 0))
                 //                .rotation3DEffect(Angle(degrees: show ? 30 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
                 .animation(.spring(response: 0.55, dampingFraction: 1.0, blendDuration: 0.5))
-                .blendMode(.darken)
+//                .blendMode(.darken)
                 .onTapGesture {
                     self.show.toggle()
             }
@@ -89,11 +89,13 @@ struct CardView: View {
 }
 
 struct CertificateView: View {
+    
+    var item = Certificate(title: "UI Design", image:"Certificate1", width: 340, height: 220)
     var body: some View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("UI Design")
+                    Text(item.title)
                         .font(.headline)
                         .foregroundColor(Color("accent"))
                         .padding(.top)
@@ -108,8 +110,11 @@ struct CertificateView: View {
             }
             .padding(.horizontal)
             Spacer()
-            Image("Background")
-        }.frame(width: 340.0, height:220)
+            Image(item.image)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                .offset(y: 50)
+            }
+            .frame(width: CGFloat(item.width), height: CGFloat(item.height))
             .background(Color.black)
             .cornerRadius(10)
             .shadow(radius: 20)

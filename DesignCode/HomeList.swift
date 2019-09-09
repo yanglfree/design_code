@@ -12,46 +12,49 @@ struct HomeList: View {
     @State var isPresent = false
     var course = courseData
     var body: some View {
-        VStack {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Courses")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                    
-                    Text("21 Courses")
-                        .foregroundColor(.gray)
+        ScrollView {
+            VStack {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Courses")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        
+                        Text("21 Courses")
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
                 }
+                .padding(.leading,60)
                 
-                Spacer()
-            }
-            .padding(.top,90)
-            .padding(.leading,60)
-                
-
-            NavigationView{
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing:30) {
                         ForEach(course) { item in
-                            CourseView(
-                                title: item.title,
-                                image: item.image,
-                                color: item.color,
-                                shadowColor: item.shadowColor, isPresent:self.$isPresent
-                            )
+                            GeometryReader{geometry in
+                                CourseView(
+                                    title: item.title,
+                                    image: item.image,
+                                    color: item.color,
+                                    shadowColor: item.shadowColor, isPresent:self.$isPresent
+                                )
+                                    .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 40) / -20 ), axis: (x: 0.0, y: 10.0, z: 0.0))
+                            }
+                            .frame(width: 246, height: 150.0)
                         }
                     }
                     Spacer()
                 }
                 .sheet(isPresented: $isPresent, content: {ContentView()})
+                .frame(height: 450)
+                .padding(.leading, 40)
+                .padding(.top, 30)
                 
+                Certificates()
+                    .padding(.leading, 40)
                 
             }
-            .padding(.leading, 30)
-            
+//            .padding(.top, 78.0)
         }
-        
-       
     }
 }
 
@@ -109,6 +112,30 @@ struct Course : Identifiable {
 }
 
 let courseData = [
+    Course(
+        title: "Build an app With SwiftUI",
+        image: "Illustration1",
+        color: Color("background3"),
+        shadowColor: Color("backgroundShadow1")
+    ),
+    Course(
+        title: "Build an app With SwiftUI",
+        image: "Illustration2",
+        color: Color("background4"),
+        shadowColor: Color("backgroundShadow2")
+    ),
+    Course(
+        title: "Build an app With SwiftUI",
+        image: "Illustration1",
+        color: Color("background3"),
+        shadowColor: Color("backgroundShadow1")
+    ),
+    Course(
+        title: "Build an app With SwiftUI",
+        image: "Illustration2",
+        color: Color("background4"),
+        shadowColor: Color("backgroundShadow2")
+    ),
     Course(
         title: "Build an app With SwiftUI",
         image: "Illustration1",

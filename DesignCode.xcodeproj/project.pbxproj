@@ -19,6 +19,7 @@
 		E1768F152320F0FD00F430DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1768F132320F0FD00F430DF /* LaunchScreen.storyboard */; };
 		E187C73523262CEB001D06EA /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187C73423262CEB001D06EA /* Tabbar.swift */; };
 		E187C737232649EA001D06EA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187C736232649EA001D06EA /* Settings.swift */; };
+		E187C73923265975001D06EA /* Certificates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187C73823265975001D06EA /* Certificates.swift */; };
 		E1A63DC523260982000E536B /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A63DC423260982000E536B /* UpdateDetail.swift */; };
 		E1A63DC72326104B000E536B /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A63DC62326104B000E536B /* UpdateStore.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		E1768F162320F0FD00F430DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E187C73423262CEB001D06EA /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		E187C736232649EA001D06EA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		E187C73823265975001D06EA /* Certificates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certificates.swift; sourceTree = "<group>"; };
 		E1A63DC423260982000E536B /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		E1A63DC62326104B000E536B /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 				E1768F0A2320F0F600F430DF /* SceneDelegate.swift */,
 				E187C73423262CEB001D06EA /* Tabbar.swift */,
 				E1768F0C2320F0F600F430DF /* ContentView.swift */,
+				E187C73823265975001D06EA /* Certificates.swift */,
 				E102CB2B23212A6900A4E3F3 /* Home.swift */,
 				E102CB2D2322363600A4E3F3 /* HomeList.swift */,
 				E187C736232649EA001D06EA /* Settings.swift */,
@@ -181,6 +184,7 @@
 				E1768F0D2320F0F600F430DF /* ContentView.swift in Sources */,
 				E187C737232649EA001D06EA /* Settings.swift in Sources */,
 				35249E4E23255906009EF639 /* BlurView.swift in Sources */,
+				E187C73923265975001D06EA /* Certificates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
