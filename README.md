@@ -191,3 +191,33 @@ struct HomeList: View {
     }
 }
 ```
+
+#### Section13 导航视图和列表
+
+SwiftUI中导航视图NavigationView 搭配NavigationLink可以快速实现 在item条目多的情况下滑动后标题栏会自动变化，并且跳转的时候自带动画效果。
+```swift
+        NavigationView {
+            List(updates) { item in
+                NavigationLink(destination: Text("1")) {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(item.title)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.leading)
+                        Text(item.text)
+                            .font(.body)
+                            .lineLimit(2)
+                            
+                        Text(item.date)
+                            .font(.footnote)
+                        .foregroundColor(.gray)
+                    }
+                }
+            }
+            .navigationBarTitle("Update")
+        .navigationBarItems(trailing:  Text("update"))
+        }
+```
+效果图：
+
+![3.gif](https://ws1.sinaimg.cn/large/007dl3HPgy1g6t4lextvjg30990i0b29.gif)
