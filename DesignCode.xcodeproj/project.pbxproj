@@ -10,18 +10,24 @@
 		35249E4E23255906009EF639 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35249E4D23255906009EF639 /* BlurView.swift */; };
 		E102CB2C23212A6900A4E3F3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102CB2B23212A6900A4E3F3 /* Home.swift */; };
 		E102CB2E2322363600A4E3F3 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102CB2D2322363600A4E3F3 /* HomeList.swift */; };
+		E133B9452325FA7A00F107EB /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133B9442325FA7A00F107EB /* UpdateList.swift */; };
 		E1768F092320F0F600F430DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1768F082320F0F600F430DF /* AppDelegate.swift */; };
 		E1768F0B2320F0F600F430DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1768F0A2320F0F600F430DF /* SceneDelegate.swift */; };
 		E1768F0D2320F0F600F430DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1768F0C2320F0F600F430DF /* ContentView.swift */; };
 		E1768F0F2320F0FD00F430DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1768F0E2320F0FD00F430DF /* Assets.xcassets */; };
 		E1768F122320F0FD00F430DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1768F112320F0FD00F430DF /* Preview Assets.xcassets */; };
 		E1768F152320F0FD00F430DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1768F132320F0FD00F430DF /* LaunchScreen.storyboard */; };
+		E187C73523262CEB001D06EA /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187C73423262CEB001D06EA /* Tabbar.swift */; };
+		E187C737232649EA001D06EA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187C736232649EA001D06EA /* Settings.swift */; };
+		E1A63DC523260982000E536B /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A63DC423260982000E536B /* UpdateDetail.swift */; };
+		E1A63DC72326104B000E536B /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A63DC62326104B000E536B /* UpdateStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35249E4D23255906009EF639 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		E102CB2B23212A6900A4E3F3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		E102CB2D2322363600A4E3F3 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
+		E133B9442325FA7A00F107EB /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		E1768F052320F0F600F430DF /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1768F082320F0F600F430DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1768F0A2320F0F600F430DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +36,10 @@
 		E1768F112320F0FD00F430DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E1768F142320F0FD00F430DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1768F162320F0FD00F430DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E187C73423262CEB001D06EA /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		E187C736232649EA001D06EA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		E1A63DC423260982000E536B /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
+		E1A63DC62326104B000E536B /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +75,18 @@
 				35249E4D23255906009EF639 /* BlurView.swift */,
 				E1768F082320F0F600F430DF /* AppDelegate.swift */,
 				E1768F0A2320F0F600F430DF /* SceneDelegate.swift */,
+				E187C73423262CEB001D06EA /* Tabbar.swift */,
 				E1768F0C2320F0F600F430DF /* ContentView.swift */,
 				E102CB2B23212A6900A4E3F3 /* Home.swift */,
 				E102CB2D2322363600A4E3F3 /* HomeList.swift */,
+				E187C736232649EA001D06EA /* Settings.swift */,
 				E1768F0E2320F0FD00F430DF /* Assets.xcassets */,
 				E1768F132320F0FD00F430DF /* LaunchScreen.storyboard */,
 				E1768F162320F0FD00F430DF /* Info.plist */,
 				E1768F102320F0FD00F430DF /* Preview Content */,
+				E133B9442325FA7A00F107EB /* UpdateList.swift */,
+				E1A63DC423260982000E536B /* UpdateDetail.swift */,
+				E1A63DC62326104B000E536B /* UpdateStore.swift */,
 			);
 			path = DesignCode;
 			sourceTree = "<group>";
@@ -156,10 +171,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1768F092320F0F600F430DF /* AppDelegate.swift in Sources */,
+				E187C73523262CEB001D06EA /* Tabbar.swift in Sources */,
+				E1A63DC72326104B000E536B /* UpdateStore.swift in Sources */,
+				E133B9452325FA7A00F107EB /* UpdateList.swift in Sources */,
 				E102CB2E2322363600A4E3F3 /* HomeList.swift in Sources */,
+				E1A63DC523260982000E536B /* UpdateDetail.swift in Sources */,
 				E1768F0B2320F0F600F430DF /* SceneDelegate.swift in Sources */,
 				E102CB2C23212A6900A4E3F3 /* Home.swift in Sources */,
 				E1768F0D2320F0F600F430DF /* ContentView.swift in Sources */,
+				E187C737232649EA001D06EA /* Settings.swift in Sources */,
 				35249E4E23255906009EF639 /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

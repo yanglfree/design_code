@@ -17,6 +17,7 @@ struct HomeList: View {
                 VStack(alignment: .leading) {
                     Text("Courses")
                         .font(.largeTitle)
+                        .fontWeight(.bold)
                     
                     Text("21 Courses")
                         .foregroundColor(.gray)
@@ -40,11 +41,16 @@ struct HomeList: View {
                             )
                         }
                     }
+                    Spacer()
                 }
                 .sheet(isPresented: $isPresent, content: {ContentView()})
+                
+                
             }
             .padding(.leading, 30)
+            
         }
+        
        
     }
 }
@@ -71,6 +77,7 @@ struct CourseView: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
                 .padding(20)
+                .padding(.leading)
                 .lineLimit(4)
                 .padding(.trailing,50)
             Spacer()
