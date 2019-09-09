@@ -301,5 +301,48 @@ List{} .onDelete{ index in
 List{}.onMove(perform: move)
 ```
 
+#### Section16 Tabbar
+
+效果图：
+
+![5.gif](https://ws1.sinaimg.cn/large/007dl3HPgy1g6ta7cpzjwg308j0h1q5f.gif)
+
+使用TabView创建tabbar页面
+
+selection表示默认被选中的tab
+
+```swift
+struct Tabbar: View {
+    
+    @State var selection = 3
+    
+    var body: some View {
+        TabView(selection: $selection){
+            Home().tabItem({
+                VStack {
+                    Image(systemName: "house")
+                    Text("home")
+                }
+                }).tag(1)
+            
+            ContentView().tabItem({
+                VStack {
+                    Image(systemName: "tag")
+                    Text("Content")
+                }
+                }).tag(2)
+            
+            UpdateList().tabItem({
+            VStack {
+                Image(systemName: "paperplane")
+                Text("Update")
+            }
+            }).tag(3)
+        }
+    }
+}
+```
+
+
 
 
